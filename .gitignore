@@ -12,3 +12,8 @@ dcs-embler
 
 # Scratch
 scratch.*
+
+# Build folder
+build/**
+# But we do want to keep it around
+!build/.gitkeep

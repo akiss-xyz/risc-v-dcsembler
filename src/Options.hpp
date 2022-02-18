@@ -1,9 +1,10 @@
+                                                \
 #pragma once
 
 #include <optional>
 #include <string>
 
-#include "include/structopt/structopt.hpp"
+#include "structopt/structopt.hpp"
 
 using namespace std;
 

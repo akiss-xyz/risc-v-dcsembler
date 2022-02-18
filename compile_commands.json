@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/noid/RISC-V/assembler/build",
+  "command": "/usr/bin/c++  -I/home/noid/RISC-V/assembler/src -I/home/noid/RISC-V/assembler/include -I/ -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/dcsembler.dir/src/Options.cpp.o -c /home/noid/RISC-V/assembler/src/Options.cpp",
+  "file": "/home/noid/RISC-V/assembler/src/Options.cpp"
+},
+{
+  "directory": "/home/noid/RISC-V/assembler/build",
+  "command": "/usr/bin/c++  -I/home/noid/RISC-V/assembler/src -I/home/noid/RISC-V/assembler/include -I/ -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/dcsembler.dir/src/main.cpp.o -c /home/noid/RISC-V/assembler/src/main.cpp",
+  "file": "/home/noid/RISC-V/assembler/src/main.cpp"
+}
+]

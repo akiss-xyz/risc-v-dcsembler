@@ -1,0 +1,19 @@
+#+begin_src python :results output
+
+
+print(" bge x10, x13, done")
+
+print("ours ")
+print("{0:b}".format(int('0x00d55463', 16)));
+
+print("theirs")
+print("{0:b}".format(int('0x00d55863', 16)));
+#+end_src
+
+#+RESULTS:
+:  bge x10, x13, done
+: ours
+    rs    rs   f3  imm4 11  opc
+: |01101|01010|101|0100|0|1100011
+: theirs
+: |01101|01010|101|1000|0|1100011

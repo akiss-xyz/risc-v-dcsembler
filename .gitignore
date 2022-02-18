@@ -1,0 +1,14 @@
+# Documentation
+riscv-card.pdf
+riscv-spec-*.pdf
+
+# The assembler itself
+dcs-embler
+
+# Output files
+*.bin
+*.riscv5i
+*.out
+
+# Scratch
+scratch.*

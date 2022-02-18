@@ -1,0 +1,13 @@
+
+
+Memory for spike starts at 0x20000, so assemble with:
+
+#+begin_src bash
+./dcs-embler -i onetwo.S -f binary -s 0x20000
+#+end_src
+
+Memory for gcc (elf) starts at 0x10054, so assemble with:
+
+#+begin_src bash
+./dcs-embler -i onetwo.S -f binary -s 0x10054
+#+end_src

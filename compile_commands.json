@@ -11,7 +11,7 @@
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
-  "command": "/usr/bin/c++   -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/catch_main.dir/catch_main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp",
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE  -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/catch_main.dir/catch_main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp",
   "file": "/home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp"
 },
 {

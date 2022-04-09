@@ -17,3 +17,7 @@ scratch.*
 build/**
 # But we do want to keep it around
 !build/.gitkeep
+
+# clangd cache.
+.cache
+.cache/**

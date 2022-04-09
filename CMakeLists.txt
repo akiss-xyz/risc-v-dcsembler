@@ -44,3 +44,11 @@ add_executable(${PROJECT_NAME} ${cppsources} ${csources})
 target_include_directories(${PROJECT_NAME} PUBLIC src/)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_include_directories(${PROJECT_NAME} PUBLIC /)
+
+# Testing
+option(ENABLE_TESTING "Enable tests" ON)
+if(ENABLE_TESTING)
+    enable_testing()
+    message("Enabled tests.")
+    add_subdirectory(test)
+endif()

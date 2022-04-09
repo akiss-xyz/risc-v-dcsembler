@@ -20,12 +20,6 @@ using namespace std;
 
 namespace DcsEmbler {
 
-struct FreeDel {
-    const void operator()(void* p) {
-        free(p);
-    }
-};
-
 struct Label {
     /// Holds the value of the (zero-based) index of the instruction this is.
     /// Just counts up for each instruction, starting at 0.
@@ -33,9 +27,6 @@ struct Label {
     /// Holds the (one-based) line number this label was found on.
     int declaredOnLine = 0;
 };
-
-const char* Options::outputFormatForBinary = ".bin.riscv5i";
-const char* Options::outputFormatForHex = ".hex.riscv5i";
 
 Options opts;
 
@@ -163,9 +154,9 @@ auto regToNum(char* token) -> int {
 }
 
 auto doIFormatInstruction(char* tokens[], int tokenCount, int lineNumber,
-                                  int opcode, int funct3,
-                                  int setImm_5_11To = -1) -> unsigned int {
-        const auto target = 0x00310093;
+                          int opcode, int funct3,
+                          int setImm_5_11To = -1) -> unsigned int {
+        // auto target = 0x00310093;
         //    e.g. target = addi x1 x2 3
         //                                      funct3      OP-IMM
         //                 |---- imm ----| |-x1-||-| |-x2-||-opco-|
@@ -467,6 +458,8 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         reorderedTokens[3] = tokens[2]; // immediate value
         const int machineOpcode = 0b1100111;
         const int funct3 = 0x00;
+        // TODO This doesn't use reorderedtokens??
+        // TODO Make a test for this.
         instruction = doIFormatInstruction(tokens, tokenCount, lineNumber, machineOpcode, funct3);
     } else if (strcmp("ecall", opcode) == 0) {
         // ECALL (Environment Call)
@@ -494,6 +487,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         // Format: I-type
         // Instruction: lw <rd> <immediate offset> <register of base address>
 
+        // auto target = 0x00312083;
         //         target = LW x1, 3(x2)
         // for us, target = LW x1 3 x2
         //                              I-type format
@@ -502,16 +496,17 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         //                  |---offset---| |----||-| |----||-opco-|
         //                  0000 0000 0011 0001 0010 0000 1000 0011
 
-        const auto target = 0x00312083;
-        char* reorderedTokens[4];
-        reorderedTokens[0] = nullptr;
+        // TODO Write a test for this
+        array<const char*, 4> reorderedTokens;
+        //char* reorderedTokens[4];
+        reorderedTokens[0] = "0"; // Doesn't matter
         reorderedTokens[1] = tokens[1]; // rd
         reorderedTokens[2] = tokens[3]; // rs1
         reorderedTokens[3] = tokens[2]; // immediate value
         const int funct3 = 0b010;
         const int machineOpcode = 0b0000011;
 
-        instruction = doIFormatInstruction(reorderedTokens, tokenCount, lineNumber,
+        instruction = doIFormatInstruction((char**)reorderedTokens.data(), tokenCount, lineNumber,
                                            machineOpcode, funct3);
     } else if (strcmp("lh", opcode) == 0) {
         // LH (Load Half).
@@ -669,7 +664,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         // Format: U-type.
         // Instruction: lui <rd> <immediate value>
 
-        const auto target = 0x000030b7;
+        // auto target = 0x000030b7;
         //         target = lui x1 3
         //                              U-type format
         //                 |-------imm[31:12]------| |-rd-||-opco-|
@@ -772,7 +767,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         // Format: R-type.
         // Instruction: srl <rd> <rs1> <rs2>
 
-        const auto target = 0x003150b3; // target = srl x1 x2 x3
+        // auto target = 0x003150b3; // target = srl x1 x2 x3
         //                              R-type format
         //                                      funct3
         //                  |funct7||-rs2| |-rs1||-| |-rd-||-opco-|
@@ -819,7 +814,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         // Format: S-type
         // Instruction: sw <
 
-        const auto target = 0x001121a3;
+        // auto target = 0x001121a3;
         //         target = SW x1, 3(x2)
         // for us, target = SW x1 3 x2
         //                              S-type format
@@ -921,8 +916,6 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
 
     //region Corner cases
     else if (strcmp("li", opcode) == 0) {
-        // TOUCH NOCOMMIT
-        cout << REDC("On li\n");
         // TODO Test
         // Now for the fun bit - the corner case.
         // Source: Slides 53 onwards https://inst.eecs.berkeley.edu/~cs61c/resources/su18_lec/Lecture7.pdf
@@ -1009,8 +1002,6 @@ auto handleLine(char* nextToken, int lineNumber) -> void {
         printf("[%3i]: ", lineNumber);
     }
 
-    bool hasLabel = false;
-
     if (tokenCount == 0) {
         // Nothing on the line.
         if (*opts.verbose) puts("");
@@ -1025,8 +1016,6 @@ auto handleLine(char* nextToken, int lineNumber) -> void {
         char* labelName = tokens[0];
         labelName[strlen(labelName) - 1] = '\0';
         string labelNameStr{labelName};
-
-        hasLabel = true;
 
         if (tokenCount > 1) {
             // Print out label info.

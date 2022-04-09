@@ -1,5 +1,8 @@
 #include "Options.hpp"
 
+const char* DcsEmbler::Options::outputFormatForBinary = ".bin.riscv5i";
+const char* DcsEmbler::Options::outputFormatForHex = ".hex.riscv5i";
+
 auto DcsEmbler::Options::parseFrom(int argc, char **argv) -> Options {
   auto app = structopt::app("DCSembler", "0.0.1");
   try {
@@ -19,14 +22,14 @@ auto DcsEmbler::Options::getOutputFileName() -> string {
     switch (*format) {
       case Format::binary:
       case Format::bin:
-        return inputFileName->append(outputFormatForBinary);
+        return *inputFileName + outputFormatForBinary;
         break;
       case Format::hexadecimal:
       case Format::hex:
-        return inputFileName->append(outputFormatForHex);
+        return *inputFileName + outputFormatForHex;
         break;
       default:
-        cout << " Unknown value for Format\n";
+        cerr << " Unknown value for Format\n";
         exit(EXIT_FAILURE);
         break;
     }

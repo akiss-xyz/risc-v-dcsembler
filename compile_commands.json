@@ -1,32 +1,50 @@
 [
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build",
-  "command": "/usr/bin/c++  -I/home/noid/Uni/y2/riscy-business/assembler/src -I/home/noid/Uni/y2/riscy-business/assembler/include -I/ -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/dcsembler.dir/src/Options.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp"
+  "command": "/usr/bin/c++  -I/home/noid/Uni/y2/riscy-business/assembler/src -I/home/noid/Uni/y2/riscy-business/assembler/include -I/ -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -o CMakeFiles/dcsembler.dir/src/Options.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
+  "output": "CMakeFiles/dcsembler.dir/src/Options.cpp.o"
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build",
-  "command": "/usr/bin/c++  -I/home/noid/Uni/y2/riscy-business/assembler/src -I/home/noid/Uni/y2/riscy-business/assembler/include -I/ -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/dcsembler.dir/src/main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/main.cpp",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/main.cpp"
+  "command": "/usr/bin/c++  -I/home/noid/Uni/y2/riscy-business/assembler/src -I/home/noid/Uni/y2/riscy-business/assembler/include -I/ -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -o CMakeFiles/dcsembler.dir/src/array.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/array.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/array.cpp",
+  "output": "CMakeFiles/dcsembler.dir/src/array.cpp.o"
+},
+{
+  "directory": "/home/noid/Uni/y2/riscy-business/assembler/build",
+  "command": "/usr/bin/c++  -I/home/noid/Uni/y2/riscy-business/assembler/src -I/home/noid/Uni/y2/riscy-business/assembler/include -I/ -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -o CMakeFiles/dcsembler.dir/src/main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/main.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/main.cpp",
+  "output": "CMakeFiles/dcsembler.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
-  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE  -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -o CMakeFiles/catch_main.dir/catch_main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp"
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE  -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -o CMakeFiles/catch_main.dir/catch_main.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/test/catch_main.cpp",
+  "output": "test/CMakeFiles/catch_main.dir/catch_main.cpp.o"
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
-  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -Winvalid-pch -x c++-header -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/cmake_pch.hxx.gch -c /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx.cxx",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx.cxx"
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -Winvalid-pch -x c++-header -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/cmake_pch.hxx.gch -c /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx.cxx",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx.cxx",
+  "output": "test/CMakeFiles/tests.dir/cmake_pch.hxx.gch"
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
-  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -Winvalid-pch -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/TestOptions.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/TestOptions.cpp",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/test/TestOptions.cpp"
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -Winvalid-pch -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/TestOptions.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/test/TestOptions.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/test/TestOptions.cpp",
+  "output": "test/CMakeFiles/tests.dir/TestOptions.cpp.o"
 },
 {
   "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
-  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -flto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -std=gnu++20 -Winvalid-pch -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/__/src/Options.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
-  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp"
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -Winvalid-pch -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/__/src/Options.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/Options.cpp",
+  "output": "test/CMakeFiles/tests.dir/__/src/Options.cpp.o"
+},
+{
+  "directory": "/home/noid/Uni/y2/riscy-business/assembler/build/test",
+  "command": "/usr/bin/c++ -DCATCH_CONFIG_DISABLE_MATCHES -DCATCH_CONFIG_FAST_COMPILE -I/home/noid/Uni/y2/riscy-business/assembler/test/../include -I/home/noid/Uni/y2/riscy-business/assembler/test/../src -g -std=gnu++20 -flto=auto -fno-fat-lto-objects -Wall -Wextra -Wpedantic -Winvalid-pch -include /home/noid/Uni/y2/riscy-business/assembler/build/test/CMakeFiles/tests.dir/cmake_pch.hxx -o CMakeFiles/tests.dir/__/src/array.cpp.o -c /home/noid/Uni/y2/riscy-business/assembler/src/array.cpp",
+  "file": "/home/noid/Uni/y2/riscy-business/assembler/src/array.cpp",
+  "output": "test/CMakeFiles/tests.dir/__/src/array.cpp.o"
 }
 ]

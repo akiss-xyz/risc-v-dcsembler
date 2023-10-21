@@ -1,12 +1,15 @@
 #include "Options.hpp"
 
-const char* DcsEmbler::Options::outputFormatForBinary = ".bin.riscv5i";
-const char* DcsEmbler::Options::outputFormatForHex = ".hex.riscv5i";
+namespace DcsEmbler {
 
-auto DcsEmbler::Options::parseFrom(int argc, char **argv) -> Options {
+const char* Options::outputFormatForBinary = ".bin.riscv5i";
+const char* Options::outputFormatForHex = ".hex.riscv5i";
+
+auto Options::parseFrom(int argc, char **argv) -> Options {
   auto app = structopt::app("DCSembler", "0.0.1");
   try {
-    return app.parse<Options>(argc, argv);
+    return app.parse<Options>(argc,
+                              const_cast<char**>(argv));
   } catch (structopt::exception &e) {
     cout << e.what();
     cout << " Usage: ";
@@ -34,4 +37,6 @@ auto DcsEmbler::Options::getOutputFileName() -> string {
         break;
     }
   }
+}
+
 }

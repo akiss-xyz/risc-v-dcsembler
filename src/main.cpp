@@ -548,7 +548,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         // Format: I-type
         // Instruction: lb <rd> <immediate offset> <register of base address>
 
-        char* reorderedTokens[4];
+        array<char*, 4> reorderedTokens;
         reorderedTokens[0] = nullptr;
         reorderedTokens[1] = tokens[1]; // rd
         reorderedTokens[2] = tokens[3]; // rs1
@@ -557,7 +557,7 @@ auto parseInstructionFrom(char* tokens[], int tokenCount, int lineNumber) -> boo
         const int funct3 = 0b100; // 0x4
         const int machineOpcode = 0b0000011;
 
-        instruction = doIFormatInstruction(reorderedTokens, tokenCount, lineNumber,
+        instruction = doIFormatInstruction(reorderedTokens.data(), tokenCount, lineNumber,
                                            machineOpcode, funct3);
     } else if (strcmp("lhu", opcode) == 0) {
         // LH (Load Half Unsigned).

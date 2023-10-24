@@ -1,0 +1,21 @@
+#+TITLE: RISC-V assembler for the University of Warwick FPGA RISC-V core
+#+LANGUAGE: en
+#+OPTIONS: toc:2
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'cube'
+#+REVEAL_THEME: moon
+
+* Hello!
+This is dcsembler, a basic assembler for the DCS's (Department of Computer Science)
+FPGA soft-core RISC-V project in 2022.
+
+This forms part of the software tooling for the project.
+* Build instructions
+The project is built using CMake, so you'll need that.
+
+Then, there are handy scripts to help you configure and build and run/test the project.
+
+You can use ~configure.sh~ to run CMake automatically, or ~configure-gui.sh~ to get a terminal interface for the same.
+
+Then, you're free to ~build.sh~ and ~run.sh~ away!
+* License
+MIT licensed - feel free to use for fun or profit!
